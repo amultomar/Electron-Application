@@ -1,0 +1,20 @@
+{
+    "name": "electron-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "build:cpp": "g++ -o backend main.cpp -I./node_modules/node-addon-api -shared -fPIC -std=c++11",
+      "postinstall": "npm run build:cpp"
+    },
+    "dependencies": {
+      "electron": "^13.1.7",
+      "node-addon-api": "^3.2.1",
+      "ffi-napi": "^3.0.1",
+      "napi": "^8.2.1"
+    },
+    "devDependencies": {
+      "electron-rebuild": "^3.2.5"
+    }
+  }
